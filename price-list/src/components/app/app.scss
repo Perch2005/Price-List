@@ -1,5 +1,20 @@
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    overflow-x: hidden;
+}
+
+.slider_buttons_group{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .slider_button{
+    margin:10px;
+    outline: none;
+    @include sliderStyle(80px,30px);
+  }

@@ -1,49 +1,22 @@
 import React from 'react'
 import ListItem from '../list-item'
-
 import './list.css'
-const listData = [
-    {
-        id:1,
-        product:'hat',
-        price:5,
-        color:'blue'
-    },
-    {
-        id:2,
-        product:'scarf',
-        price:10,
-        color:'gray'
-    },
-    {
-        id:3,
-        product:'boots',
-        price:20,
-        color:'brown'
-    },
-    {
-        id:4,
-        product:'dress',
-        price:30,
-        color:'purple'
-    },
-    {
-        id:5,
-        product:'coat',
-        price:15,
-        color:'black'
-    }
 
 
-]
-const List = () =>{
-   
+const List = ({listDatas,listData}) =>{
+
     return(
-        <div className = "list">
-            
+        <div className = "col">
+        <div className = {`list_slider activ_slider_${listData.index}`}>
+<div className = "list_slider_wraper" style = {{
+    'transform': `translateX(-${listData.index*(100/listDatas.length)}%)`
+}}>
          {
-             listData.map((data) => (<ListItem data = {data}/>))
+             listDatas.map((data) => (<ListItem data = {data}/>))
          }
+         
+         </div>
+        </div>
         </div>
     )
 }

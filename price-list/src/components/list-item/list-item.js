@@ -3,12 +3,12 @@ import './list-item.css'
 
 const ListItem = ({data}) =>{
     return(
-       <div className = "list_item_wraper">
-           <div className = "list_item">
-        <h3>Prices</h3>
+       <div className = {`list_item list_item_${data.index}`} >
+           <div className = "list_item_wraper">
+        <h3>{data.product}</h3>
        <ul className = "list_item_ul">
-           <li>{`${data.product}: ${data.price}$`}</li>
-           <li>{`color: ${data.color}`}</li>
+           <li>{`Price: ${data.price}$`}</li>
+           <li>{`Color: ${data.color}`}</li>
        </ul>
        </div>
         </div>
