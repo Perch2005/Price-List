@@ -1,0 +1,20 @@
+.list_item_wraper {
+  height: 100px;
+  width: 200px;
+  border-radius: 10px;
+  border: 2px solid black;
+  background: white;
+  font-family: sans-serif;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.list_item {
+  margin: 10px;
+}
+
+.list_item_ul {
+  list-style: none;
+}
+/*# sourceMappingURL=list-item.css.map */
